@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Tareas Diarias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Organizador de Tareas Diarias</h1>
+        </header>
+        
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Añadir nueva tarea...">
+            <button id="addTask"><i class="fas fa-plus"></i> Añadir</button>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+        
+        <div class="task-list" id="taskList">
+            <!-- Las tareas se agregarán aquí dinámicamente -->
+        </div>
+        
+        <div class="app-info">
+            <p>Hecho con <span class="heart">❤️</span> para organizar tus tareas</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Registrar el Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker registrado con éxito:', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('Error al registrar el Service Worker:', error);
+            });
+        }
+    </script>
+</body>
+</html>
