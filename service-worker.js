@@ -1,10 +1,13 @@
 const CACHE_NAME = 'tareas-diarias-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
+  '/Tareas-Diarias/',
+  '/Tareas-Diarias/index.html',
+  '/Tareas-Diarias/styles.css',
+  '/Tareas-Diarias/script.js',
+  '/Tareas-Diarias/manifest.json',
+  '/Tareas-Diarias/icons/icon-144x144.svg',
+  '/Tareas-Diarias/icons/icon-192x192.svg',
+  '/Tareas-Diarias/icons/icon-512x512.svg',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Pacifico&display=swap'
 ];

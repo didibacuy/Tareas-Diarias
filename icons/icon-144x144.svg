@@ -1,0 +1,31 @@
+<svg width="144" height="144" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="petalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e83e8c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d63384;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="centerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8bbd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular -->
+  <circle cx="72" cy="72" r="70" fill="#fff9fb" stroke="#e83e8c" stroke-width="2"/>
+  
+  <!-- Pétalos -->
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(0 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(45 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(90 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(135 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(180 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(225 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(270 72 72)"/>
+  <ellipse cx="72" cy="40" rx="12" ry="20" fill="url(#petalGradient)" transform="rotate(315 72 72)"/>
+  
+  <!-- Centro de la flor -->
+  <circle cx="72" cy="72" r="15" fill="url(#centerGradient)" stroke="#d63384" stroke-width="1"/>
+  
+  <!-- Detalles decorativos -->
+  <text x="72" y="77" text-anchor="middle" font-size="16" fill="white" font-family="Arial, sans-serif">T</text>
+</svg>

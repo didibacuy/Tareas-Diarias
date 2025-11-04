@@ -14,6 +14,10 @@
 
     <!-- Manifest con ruta absoluta para GitHub Pages -->
     <link rel="manifest" href="/Tareas-Diarias/manifest.json">
+    
+    <!-- Iconos para diferentes plataformas -->
+    <link rel="icon" type="image/svg+xml" href="/Tareas-Diarias/icons/icon-144x144.svg">
+    <link rel="apple-touch-icon" href="/Tareas-Diarias/icons/icon-144x144.svg">
 
     <!-- Colores del tema (opcional pero recomendado para PWA) -->
     <meta name="theme-color" content="#e83e8c">
@@ -50,6 +54,7 @@
 
     <!-- Registro del Service Worker -->
     <script>
+        // Registrar el Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/Tareas-Diarias/service-worker.js')
@@ -57,7 +62,7 @@
                     console.log('✅ Service Worker registrado con éxito:', registration.scope);
                 })
                 .catch(function(error) {
-                    console.log('❌ Error al registrar el Service Worker:', error);
+                    console.log('❌ Error al registrar Service Worker:', error);
                 });
             });
         }
