@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tareas-diarias-v1';
+const CACHE_NAME = 'tareas-diarias-v2'; // Cambiado de v1 a v2
 const urlsToCache = [
   '/Tareas-Diarias/',
   '/Tareas-Diarias/index.html',
