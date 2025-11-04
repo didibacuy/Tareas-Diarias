@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizador de Tareas Diarias</title>
+
+    <!-- Estilos locales -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuentes e iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+
+    <!-- Manifest con ruta absoluta para GitHub Pages -->
+    <link rel="manifest" href="/Tareas-Diarias/manifest.json">
+
+    <!-- Colores del tema (opcional pero recomendado para PWA) -->
+    <meta name="theme-color" content="#e83e8c">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -35,16 +45,20 @@
         </div>
     </div>
     
+    <!-- Script principal -->
     <script src="script.js"></script>
+
+    <!-- Registro del Service Worker -->
     <script>
-        // Registrar el Service Worker para PWA
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-            .then(function(registration) {
-                console.log('Service Worker registrado con éxito:', registration.scope);
-            })
-            .catch(function(error) {
-                console.log('Error al registrar el Service Worker:', error);
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/Tareas-Diarias/service-worker.js')
+                .then(function(registration) {
+                    console.log('✅ Service Worker registrado con éxito:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('❌ Error al registrar el Service Worker:', error);
+                });
             });
         }
     </script>
